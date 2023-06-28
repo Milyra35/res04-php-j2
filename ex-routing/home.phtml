@@ -1,0 +1,38 @@
+<?php
+
+?>
+
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Exercice PHP</title>
+    </head>
+    <body>
+        <header>
+            <h1>Home</h1>
+            <nav>
+                <ul>
+                    <?php
+                        foreach($paths as $path)
+                        {
+                    ?>
+                    <li>
+                        <a href="<?= $path['path']; ?>"><?= $path['name']; ?></a>
+                    </li>
+                    <?php
+                        }
+                    ?>
+                </ul>
+            </nav>
+        </header>
+        <form action="index.php" method="GET">
+            <select name="route" id="route">
+                <option value="">Choisissez</option>
+                <option value="about">About</option>
+                <option value="contact">Contact</option>
+            </select>
+            <button type="submit">Confirmer</button>
+        </form>
+    </body>
+</html>
