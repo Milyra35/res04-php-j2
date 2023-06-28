@@ -13,16 +13,21 @@
         <form action="index.php" method="POST">
             <label for="number-one">Nombre 1</label>
             <input type="number" name="number-one" id="number-one" required>
+            
             <label for="number-two">Nombre 2</label>
-            <input type="number" name="number-two" id="number-two" required>
+            <input type="number" name="number-two" id="number-two">
+            
             <select id="operation" name="operation">
                 <option value="">Choisissez une opération</option>
                 <option value="addition">Addition</option>
                 <option value="soustraction">Soustraction</option>
                 <option value="multiplication">Multiplication</option>
                 <option value="division">Division</option>
+                <option value="puissance">Puissance</option>
+                <option value="factorielle">Factorielle</option>
             </select>
-            <button>Calculer</button>
+            
+            <input name="submit" id="submit" type="submit" value="Calculer">
         </form>
     </body>
 </html>
