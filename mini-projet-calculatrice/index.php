@@ -40,6 +40,33 @@ if(isset($_POST["submit"]))
         $result = factorial($number1);
         echo $result;
     }
+    
+}
+
+if(isset($_POST["submit"]))
+{
+    $surface = $_POST["surface"];
+    
+    if($surface === "rectangle")
+    {
+        $result = rectangle_surface($number1, $number2);
+        echo $result;
+    }
+    else if($surface === "triangle rectangle")
+    {
+        $result = rectangle_triangle_surface($number1, $number2);
+        echo $result;
+    }
+    else if($surface === "triangle")
+    {
+        $result = basic_triangle_surface($number1, $number2);
+        echo $result;
+    }
+    else if($surface === "cercle")
+    {
+        $result = disk_surface($number1);
+        echo $result;
+    }
 }
 
 require "calculator.phtml";
